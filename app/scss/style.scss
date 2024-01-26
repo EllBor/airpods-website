@@ -44,7 +44,41 @@
         &:has(.content-item__active.color--green)::before{
             background: linear-gradient(180deg, #DDEAD9 0%, rgba(235, 235, 235, 0.00) 100%);
         }
+    }
 
+    &__content-title{
+        font-size: 210px;
+        font-weight: 700;
+        position: absolute;
+        &--air{
+            display: inline-block;
+            position: relative;
+            transform: translateY(106px);
+        }
+    
+        &--pod{
+            display: inline-block;
+            position: relative;
+            transform: translateY(106px);
+            z-index: -1;
+        }
+        
+        &--s{
+            display: inline-block;
+            transform: translateY(145px);
+        }
+        
+        &--m{
+            display: inline-block;
+            transform: translate(-103px,384px);
+        }
+        
+        &--ax{
+            display: inline-block;
+            transform: translate(-176px, 523px);
+            position: relative;
+            z-index: -1;
+        }
     }
 }
 
@@ -74,41 +108,6 @@
     display: inline-block;
 }
 
-
-.title{
-    font-size: 210px;
-    font-weight: 700;
-    position: absolute;
-    &--air{
-        display: inline-block;
-        position: relative;
-        transform: translateY(106px);
-    }
-
-    &--pod{
-        display: inline-block;
-        position: relative;
-        transform: translateY(106px);
-        z-index: -1;
-    }
-    
-    &--s{
-        display: inline-block;
-        transform: translateY(145px);
-    }
-    
-    &--m{
-        display: inline-block;
-        transform: translate(-103px,384px);
-    }
-    
-    &--ax{
-        display: inline-block;
-        transform: translate(-176px, 523px);
-        position: relative;
-        z-index: -1;
-    }
-}
 
 .choose-color{
     padding: 45px 0 120px;
@@ -279,51 +278,58 @@
         flex-wrap: wrap;
     }
 
-    .title{
+    .header__content-title{
         font-size: 180px;
         transform: translate(129px, 29px);
         &--ax{
-            transform: translate(-187px, 395px);
+            transform: translate(-103px, 385px);
         }
     }
 }
 
 @media (max-width: 1350px) {
-    .title{
+    .header__content-title{
         transform: none;
         font-size: 140px;
         padding-top: 13vh;
         left: 0;
         right: 0;
         text-align: center;
-
         &--pod{
             z-index: 1;
         }
 
         &--s {
-            transform: none;
+            transform: translate(0px, 109px);
         }
 
         &--m {
-            transform: none;
+            transform: translate(2px, 157px);
         }
 
         &--ax {
-            transform: none;
+            transform: translate(23px, 207px);
         }
     }
 
 }
 
-@media (max-width: 930px) {
-    .title{
+@media (max-width: 960px) {
+    .header__content-title{
         position: relative;
         font-size: 100px;
         padding-top: 0;
         margin-bottom: 10px;
         &--m {
-            padding-left: 15px;
+            transform: translate(0px, 124px);
+        }
+
+        &--ax {
+            transform: translate(0px, 124px);
+        }
+
+        &--s {
+            transform: translate(0px, 75px);
         }
     
         &--air{
@@ -368,12 +374,31 @@
         }
     }
 
-    .title{
+    .header__content-title{
         font-size: 58px;
     }
 }
 
 @media (max-width: 560px) {
+
+    .header__content-title{
+        position: relative;
+        font-size: 60px;
+        padding-top: 0;
+        margin-bottom: 10px;
+        &--m {
+            transform: translate(-92px, 59px);
+        }
+
+        &--ax {
+            transform: translate(-92px, 59px);
+        }
+
+        &--s {
+            display: inline;
+        }
+    }
+
  
     .choose-color{
         padding-bottom: 40px;
@@ -427,6 +452,19 @@
 }
 
 @media (max-width: 414px) {
+    .header__content-title{
+        position: relative;
+        font-size: 60px;
+        padding-top: 0;
+        margin-bottom: 5px;
+        &--m {
+            transform: translate(-144px, 52px);
+        }
+
+        &--ax {
+            transform: translate(54px, -19px);
+        }
+    }
     .main__title, .choose-color__title{
         font-size: 28px;
     }
@@ -440,8 +478,18 @@
     }
 }
 
-@media (max-width: 404px){
-    .title{
+@media (max-width: 408px){
+    .header__content-title{
+        position: relative;
         font-size: 40px;
+        padding-top: 0;
+        margin-bottom: 10px;
+        &--m {
+            transform: translate(-60px, 39px);
+        }
+
+        &--ax {
+            transform: translate(-60px, 39px);
+        }
     }
 }
